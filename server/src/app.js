@@ -8,12 +8,11 @@ app.use(cors({
 }));
 
 app.get('/', (req, res) => {
-  const delay = Math.round(2000 * Math.random());
+  const delay = Math.round(5000 * Math.random());
   return Promise.delay(delay)
     .then(() => {
       res.json({
         counter: Math.floor(10 * Math.random()),
-        delay,
       });
     });
 });
