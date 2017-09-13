@@ -4,18 +4,18 @@ import moment from 'moment';
 import React from 'react';
 
 import { completedSelector, isLoading, oldestSelector } from '../selectors';
-import { sendRequest } from '../actions';
+import { startRequest } from '../actions';
 
 class Example extends React.Component {
   render() {
-    const { completed, sendRequest: sendRequestProp } = this.props;
+    const { completed, startRequest: startRequestProp } = this.props;
 
     return (
       <div className="container">
         <p>
           <button
             className="btn btn-primary"
-            onClick={() => sendRequestProp()}
+            onClick={() => startRequestProp()}
             type="button"
           >
             Send Request
@@ -75,5 +75,5 @@ const selector = createStructuredSelector({
 });
 
 export default connect(selector, {
-  sendRequest,
+  startRequest,
 })(Example);
