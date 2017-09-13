@@ -1,2 +1,2 @@
-test-package
+throttled-counter
 ===
