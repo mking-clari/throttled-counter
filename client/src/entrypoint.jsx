@@ -1,6 +1,15 @@
+import { Provider } from 'react-redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Example from './Example';
+import configureStore from './store/configureStore';
+import Example from './components/Example';
 
-ReactDOM.render(<Example />, document.getElementById('content'));
+const store = configureStore();
+
+ReactDOM.render(
+  <Provider store={store}>
+    <Example />
+  </Provider>,
+  document.getElementById('content')
+);

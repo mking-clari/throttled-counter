@@ -1,0 +1,4 @@
+export default {
+  END_REQUEST: 'END_REQUEST',
+  START_REQUEST: 'START_REQUEST',
+};
