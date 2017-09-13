@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "nodemon": "^1.12.0"
+  }
+}

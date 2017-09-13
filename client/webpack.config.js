@@ -3,6 +3,14 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
+  entry: [
+    'babel-polyfill',
+    'rxjs',
+    path.resolve(__dirname, 'src/entrypoint'),
+  ],
+  output: {
+    publicPath: '/static/',
+  },
   module: {
     rules: [
       {
@@ -39,4 +47,14 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+  devtool: 'eval',
+  devServer: {
+    port: 8091,
+    hot: true,
+    inline: true,
+    historyApiFallback: true,
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 };
